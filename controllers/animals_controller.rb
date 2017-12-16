@@ -6,3 +6,8 @@ get '/animals/index' do
   @animals = Animal.all()
   erb(:"animals/index")
 end
+
+# get 'animals/:id/edit' do
+#   @animals = Animal.find(params['id'])
+#   erb(:edit)
+# end

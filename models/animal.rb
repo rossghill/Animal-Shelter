@@ -32,4 +32,10 @@ class Animal
       return result_array
   end
 
+  def self.delete_all
+    sql = "DELETE FROM animals"
+    values = []
+    result = SqlRunner.run(sql, values)
+  end
+
 end
