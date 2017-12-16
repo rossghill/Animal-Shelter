@@ -1,3 +1,5 @@
+require_relative('../db/sqlrunner')
+
 class Animal
 
   def initialize(options)

@@ -1,3 +1,5 @@
+require_relative('../db/sqlrunner')
+
 class Owner
 
   def method_name(options)
