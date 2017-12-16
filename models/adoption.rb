@@ -2,6 +2,8 @@ require_relative('../db/sqlrunner')
 
 class Adoption
 
+  attr_reader(:id, :adoption_date, :owner_id, :animal_id)
+
   def initialize(options)
     @id = options['id'].to_i
     @adoption_date = options['adoption_date']
@@ -17,7 +19,7 @@ class Adoption
           RETURNING id"
     values = [@adoption_date, @owner_id, @animal_id]
     result =  SqlRunner.run(sql, values)
-    @id = result[0]['id'].to_i      
+    @id = result[0]['id'].to_i
   end
 
 end

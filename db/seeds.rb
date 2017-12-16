@@ -38,3 +38,9 @@ owner3 = Owner.new({'name' => 'John'})
 owner1.save()
 owner2.save()
 owner3.save()
+
+adoption1 = Adoption.new({'adoption_date' => '2017-12-16',
+  'owner_id' => owner1.id,
+  'animal_id' => animal1.id})
+
+adoption1.save()  
