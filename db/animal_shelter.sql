@@ -10,7 +10,7 @@ CREATE TABLE animals (
   name VARCHAR(255),
   admission_date DATE,
   adoptable VARCHAR(255),
-  animal_type VARCHAR(255) --REFERENCES animal_types(name),
+  animal_type VARCHAR(255), --REFERENCES animal_types(name),
   adoption_status VARCHAR(255)
 );
 
@@ -27,6 +27,6 @@ CREATE TABLE animal_types (
 CREATE TABLE adoptions (
   id SERIAL8 PRIMARY KEY,
   adoption_date DATE,
-  owner_id SERIAL8 REFERENCES owner(id),
-  animal_id SERIAL8 REFERENCES animal(id)
+  owner_id SERIAL8 REFERENCES owners(id),
+  animal_id SERIAL8 REFERENCES animals(id)
 );

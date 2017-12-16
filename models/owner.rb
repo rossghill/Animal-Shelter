@@ -2,7 +2,7 @@ require_relative('../db/sqlrunner')
 
 class Owner
 
-  def method_name(options)
+  def initialize(options)
     @id = options["id"].to_i
     @name = options["name"]
   end
@@ -13,7 +13,7 @@ class Owner
           RETURNING id"
     values = [@name]
     result = SqlRunner.run(sql, values)
-    @id = result[0]['id'].to_i      
+    @id = result[0]['id'].to_i
   end
 
 end
