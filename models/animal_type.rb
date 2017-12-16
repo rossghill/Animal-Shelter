@@ -14,7 +14,7 @@ class AnimalType
           VALUES ($1)
           RETURNING id"
     result = SqlRunner.run(sql, [@name])
-    @id = result[0]['id'].to_id
+    @id = result[0]['id'].to_i
   end
 
 end

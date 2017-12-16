@@ -43,4 +43,14 @@ adoption1 = Adoption.new({'adoption_date' => '2017-12-16',
   'owner_id' => owner1.id,
   'animal_id' => animal1.id})
 
-adoption1.save()  
+adoption1.save()
+
+animal_type1 = AnimalType.new({'name' => 'Dog'})
+animal_type2 = AnimalType.new({'name' => 'Guinea Pig'})
+animal_type3 = AnimalType.new({'name' => 'Cat'})
+animal_type4 = AnimalType.new({'name' => 'Python'})
+
+animal_type1.save()
+animal_type2.save()
+animal_type3.save()
+animal_type4.save()
