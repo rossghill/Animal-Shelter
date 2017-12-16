@@ -1,0 +1,4 @@
+class AnimalType
+
+
+end  
