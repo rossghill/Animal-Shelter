@@ -11,9 +11,8 @@ class AnimalType
     sql = "INSERT INTO animal_types(name)
           VALUES ($1)
           RETURNING id"
-    values = [@name]
-    result = SqlRunner.run(sql, values)
-    @id = result[0].to_id    
+    result = SqlRunner.run(sql, [@name])
+    @id = result[0]['id'].to_id    
   end
 
 end
