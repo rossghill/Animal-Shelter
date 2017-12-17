@@ -3,7 +3,8 @@
 <% @animals.each do |animal| %>
 <h3>Name</h3>
 <p><%= animal.name %></p>
-<p><%= animal.admission_date %></p>
+<p>Admission Date: <%= animal.admission_date %></p>
+<p>Available for adoption? <%= animal.adoptable %></p>
 <a href="/animals/show">Edit</a>
 <hr/>
 <% end %>

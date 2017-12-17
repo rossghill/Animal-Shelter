@@ -14,22 +14,22 @@ require_relative('../models/adoption')
 
 animal1 = Animal.new({'name' => 'Chico',
                       'admission_date' => '2017-07-01',
-                      'adoptable' => 'yes',
+                      'adoptable' => 'Yes',
                       'animal_type' => 'Dog',
                       'adoption_status' => 'unadopted'})
 animal2 = Animal.new({'name' => 'Gizmo',
                       'admission_date' => '2017-11-17',
-                      'adoptable' => 'no',
+                      'adoptable' => 'No',
                       'animal_type' => 'Guinea Pig',
                       'adoption_status' => 'unadopted'})
 animal3 = Animal.new({'name' => 'Liz',
                       'admission_date' => '2017-11-08',
-                      'adoptable' => 'yes',
+                      'adoptable' => 'Yes',
                       'animal_type' => 'Cat',
                       'adoption_status' => 'adopted'})
 animal4 = Animal.new({'name' => 'Elmo',
                       'admission_date' => '2017-12-09',
-                      'adoptable' => 'no',
+                      'adoptable' => 'No',
                       'animal_type' => 'Python',
                       'adoption_status' => 'adopted'})
 
