@@ -33,11 +33,11 @@ class Animal
   end
 
   def self.find(id)
-    sql = "SELECT FROM animals
+    sql = "SELECT * FROM animals
           WHERE id = $1"
     values = [id]
-    returned_animal = SqlRunner.run(sql, values)[0]
-    animal = Animal.new(result)
+    returned_animal = SqlRunner.run(sql, values).first()
+    animal = Animal.new(returned_animal)
     return animal
   end
 

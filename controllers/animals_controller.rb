@@ -7,12 +7,17 @@ get '/animals/index' do
   erb(:"animals/index")
 end
 
-# get 'animals/:id/edit' do
+# get 'animals/index/:id/edit' do
 #   @animals = Animal.find(params['id'])
 #   erb(:edit)
 # end
 
-get 'animals/:id' do
-  @animals = Animal.find(params['id'])
-  erb(:show)
+# get 'animals/:id' do
+#   @animal = Animal.find(params['id'])
+#   erb(:"animals/show")
+# end
+
+get '/animals/4' do
+  @animal = Animal.find(params['id'])
+  erb(:"animals/show")
 end

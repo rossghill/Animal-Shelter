@@ -1,3 +1,5 @@
+require('pry-byebug')
+
 require_relative('../models/animal')
 require_relative('../models/owner')
 require_relative('../models/animal_type')
@@ -5,10 +7,10 @@ require_relative('../models/adoption')
 
 # Date is ISO 8601 format: YYYY-MM-DD
 
-Animal.delete_all()
-Owner.delete_all()
-AnimalType.delete_all()
-Adoption.delete_all()
+# Animal.delete_all()
+# Owner.delete_all()
+# AnimalType.delete_all()
+# Adoption.delete_all()
 
 animal1 = Animal.new({'name' => 'Chico',
                       'admission_date' => '2017-07-01',
@@ -59,3 +61,6 @@ animal_type1.save()
 animal_type2.save()
 animal_type3.save()
 animal_type4.save()
+
+binding.pry()
+nil
