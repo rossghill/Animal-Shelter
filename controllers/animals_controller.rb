@@ -11,3 +11,8 @@ end
 #   @animals = Animal.find(params['id'])
 #   erb(:edit)
 # end
+
+get 'animals/:id' do
+  @animals = Animal.find(params['id'])
+  erb(:show)
+end

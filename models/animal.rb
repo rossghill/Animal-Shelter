@@ -25,11 +25,20 @@ class Animal
   end
 
   def self.all
-      sql = "SELECT * FROM animals"
-      values = []
-      returned_hash = SqlRunner.run(sql, values)
-      result_array = returned_hash.map { |animal| Animal.new(animal) }
-      return result_array
+    sql = "SELECT * FROM animals"
+    values = []
+    returned_hash = SqlRunner.run(sql, values)
+    result_array = returned_hash.map { |animal| Animal.new(animal) }
+    return result_array
+  end
+
+  def self.find(id)
+    sql = "SELECT FROM animals
+          WHERE id = $1"
+    values = [id]
+    returned_animal = SqlRunner.run(sql, values)[0]
+    animal = Animal.new(result)
+    return animal
   end
 
   def self.delete_all
