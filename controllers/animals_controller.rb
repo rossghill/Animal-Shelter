@@ -12,12 +12,7 @@ end
 #   erb(:edit)
 # end
 
-# get 'animals/:id' do
-#   @animal = Animal.find(params['id'])
-#   erb(:"animals/show")
-# end
-
-get '/animals/4' do
-  @animal = Animal.find(params['id'])
+get '/animals/:id' do
+   @animal = Animal.find(params['id'])
   erb(:"animals/show")
 end
