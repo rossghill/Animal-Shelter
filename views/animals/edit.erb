@@ -3,5 +3,11 @@
 <p>Animal Type: <%= @animal.animal_type %></p>
 
 <form method="POST" action="/animals/<%= @animal.id %>">
-
+  <input type="text" name="name" value="<%= @animal.name %>"/>
+  <label for="name">Name:</label>
+  <p>Available for Adoption:</p>
+  <input type="radio" name="adoptable" value="<%= @animal.adoptable %>"/>
+  <label for="adoptable">Yes</label>
+  <input type="radio" name="adoptable" value="<%= @animal.adoptable %>"/>
+  <label for="adoptable">No</label>
 </form>

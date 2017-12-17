@@ -10,7 +10,7 @@ end
 
 #List individual
 get '/animals/:id' do
-   @animal = Animal.find(params['id'])
+  @animal = Animal.find(params['id'])
   erb(:"animals/show")
 end
 
@@ -21,11 +21,11 @@ get 'animals/:id/edit' do
 end
 
 #Update
-# post 'animals/:id'
-#   animal = Animal.find(params['id'])
-#   animal.save()
-#   redirect to ('/:id')
-# end
+post 'animals/:id' do
+  animal = Animal.find(params['id'])
+  animal.save()
+  redirect to ('/:id')
+end
 
 #Delete
 post 'animals/:id' do

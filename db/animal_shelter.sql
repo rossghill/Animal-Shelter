@@ -5,18 +5,19 @@ DROP TABLE IF EXISTS owners;
 
 -- # db name: animal_shelter
 
+CREATE TABLE owners (
+  id SERIAL8 PRIMARY KEY,
+  name VARCHAR(255)
+);
+
 CREATE TABLE animals (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   admission_date DATE,
   adoptable VARCHAR(255),
+  owner INT2 REFERENCES owners(id),
   animal_type VARCHAR(255), --REFERENCES animal_types(name),
   adoption_status VARCHAR(255)
-);
-
-CREATE TABLE owners (
-  id SERIAL8 PRIMARY KEY,
-  name VARCHAR(255)
 );
 
 CREATE TABLE animal_types (
