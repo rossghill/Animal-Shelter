@@ -1,7 +1,33 @@
 body {
-  background-color: #22F7FF;
+  background-color: #EF9A9A;
+  font-family: 'Courier'
 }
 
 h1 {
-  color: blue;
+  text-align: center;
 }
+nav {
+  background-color: #926B7A;
+  padding-top:2px;
+  padding-bottom: 2px
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav ul li a {
+  text-decoration: none
+	}
+
+nav ul li a:hover {
+	color: #000;
+	background-color: #765561;
+	}

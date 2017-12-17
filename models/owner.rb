@@ -18,6 +18,14 @@ class Owner
     @id = result[0]['id'].to_i
   end
 
+  def self.all
+    sql = "SELECT * FROM owners"
+    values = []
+    returned_hash = SqlRunner.run(sql, values)
+    result_array = returned_hash.map { |owner| Owner.new(owner) }
+    return result_array
+  end
+
   def delete()
     sql = "DELETE FROM owners
           WHERE id = $1"

@@ -68,5 +68,6 @@ animal_type2.save()
 animal_type3.save()
 animal_type4.save()
 
+
 binding.pry()
 nil
