@@ -1,4 +1,5 @@
 require_relative('../db/sqlrunner')
+require_relative('./animal')
 
 class Owner
 
@@ -48,10 +49,15 @@ class Owner
     return owner
   end
 
-  def self.animals
-      sql =
-      values =
+  def animals
+      sql = "SELECT animals.*
+            FROM animals
+            INNER JOIN adoptions
+            ON adoptions_owner.id = owner.id
+            WHERE adoptions_animal.id = $1"
+      values = [@id]
       result = SqlRunner.run(sql, values)
+      return Animal.map { |animal| Animal.new(result)}
   end
 
 end
