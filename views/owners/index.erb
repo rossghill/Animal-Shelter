@@ -1,9 +1,13 @@
 <h2>Current Owners</h2>
 
-<% @owners.each do |owner| %>
-<h3>Name</h3>
-<p><%= owner.name %></p>
-<a href="/owners/show">Edit</a>
+<% @owners.each do |own| %>
+  <% @animals.each do |animal| %>
+  <h3>Name</h3>
+<p><%= own.name %></p>
+<p>Pet</p>
+<p><%= animal.owner %></p>
+<a href="/owners/<%= own.id %>">Edit</a>
 
 <hr/>
+  <% end %>
 <% end %>

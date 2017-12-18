@@ -48,4 +48,10 @@ class Owner
     return owner
   end
 
+  def self.animals
+      sql =
+      values =
+      result = SqlRunner.run(sql, values)
+  end
+
 end

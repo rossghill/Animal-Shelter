@@ -11,12 +11,7 @@
 <form method="POST" action="/animals/<%= @animal.id %>">
   <label for="name">Name:</label>
   <input type="text" name="name" value="<%= @animal.name %>" />
-  <label for="name">Owner:</label>
-  <input type="text" name="name" value="<%= @animal.name %>" />
-  <p>Available for Adoption:</p>
-  <input type="radio" name="adoptable" value="<%= @animal.adoptable %>" />
-  <label for="adoptable">Yes</label>
-  <input type="radio" name="adoptable" value="<%= @animal.adoptable %>" />
-  <label for="adoptable">No</label>
-  <p><input type="submit"></p>
+  <label for="adoptable">Available for Adoption:</label>
+  <input type="text" name="adoptable" value="<%= @animal.adoptable %>" />
+    <p><input type="submit" value="Submit"></p>
 </form>

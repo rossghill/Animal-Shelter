@@ -26,7 +26,7 @@ end
 
 #Update
 post '/animals/:id' do
-  animal = Animal.find(params['id'])
-  animal.save()
-  redirect to ('/:id')
+  animal = Animal.new(params)
+  animal.update()
+  redirect to ("/animals/index")
 end
