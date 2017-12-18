@@ -6,6 +6,11 @@ body {
 h1 {
   text-align: center;
 }
+
+h2 {
+  text-decoration: underline;
+}
+
 nav {
   background-color: #926B7A;
   padding-top:2px;
@@ -31,3 +36,7 @@ nav ul li a:hover {
 	color: #000;
 	background-color: #765561;
 	}
+
+.bold-text {
+  font-weight: bold;
+}

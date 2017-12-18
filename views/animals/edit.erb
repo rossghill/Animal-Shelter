@@ -1,16 +1,15 @@
-<br/>
 <form method="POST" action="/animals/<%= @animal.id %>">
-  <label for="name">Name:</label>
-  <input type="text" name="name" value="<%= @animal.name %>" />
-  <p><label for="admission_date">Admission Date:</label>
-  <input type="text" name="admission_date" value="<%= @animal.admission_date %>" /><p>
-  <p><label for="animal_type">Animal Type</label>
-  <input type="text" name="animal_type" value="<%= @animal.animal_type %>" /><p>
-  <p><label for="adoptable">Adoptable?:</label>
-  <input type="text" name="adoptable" value="<%= @animal.adoptable %>" /><p>
-  <p><label for="owner">Owner:</label>
-  <input type="text" name="owner" value="<%= @animal.owner %>" /><p>
-  <p><label for="adoption_status">Adoption Status:</label>
-  <input type="text" name="adoption_status" value="<%= @animal.adoption_status %>" /><p>
+  <p><span class="bold-text"><label for="name">Name:</label>
+  <input type="text" name="name" value="<%= @animal.name %>" /></p>
+  <p><span class="bold-text"><label for="admission_date">Admission Date:</label>
+  <input type="text" name="admission_date" value="<%= @animal.admission_date %>" /></span><p>
+  <p><span class="bold-text"><label for="animal_type">Animal Type</label>
+  <input type="text" name="animal_type" value="<%= @animal.animal_type %>" /></span><p>
+  <p><span class="bold-text"><label for="adoptable">Adoptable?:</label>
+  <input type="text" name="adoptable" value="<%= @animal.adoptable %>" /></span><p>
+  <p><span class="bold-text"><label for="owner">Owner:</label>
+  <input type="text" name="owner" value="<%= @animal.owner %>" /></span><p>
+  <p><span class="bold-text"><label for="adoption_status">Adoption Status:</label>
+  <input type="text" name="adoption_status" value="<%= @animal.adoption_status %>" /></span><p>
     <p><input type="submit" value="Submit"></p>
 </form>

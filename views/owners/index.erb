@@ -1,8 +1,7 @@
 <h2>Current Owners</h2>
 
 <% @owners.each do |owner| %>
-  <h3>Name</h3>
-<p><%= owner.name %></p>
+<p><span class="bold-text"<%= owner.name %></span></p>
 <p>Pet</p>
 <p><%= owner['id'].animals %></p>
 <a href="/owners/<%= owner.id %>">Edit</a>
