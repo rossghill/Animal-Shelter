@@ -15,7 +15,7 @@ CREATE TABLE animals (
   name VARCHAR(255),
   admission_date DATE,
   adoptable VARCHAR(255),
-  owner INT2 REFERENCES owners(id),
+  owner INT2 REFERENCES owners(id),  --DELETEEEE
   animal_type VARCHAR(255), --REFERENCES animal_types(name),
   adoption_status VARCHAR(255)
 );
