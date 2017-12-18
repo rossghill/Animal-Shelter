@@ -1,17 +1,16 @@
-<p>Name:
-  <%= @animal.name %>
-</p>
-<p>Admission Date:
-  <%= @animal.admission_date %>
-</p>
-<p>Animal Type:
-  <%= @animal.animal_type %>
-</p>
-<hr/>
+<br/>
 <form method="POST" action="/animals/<%= @animal.id %>">
   <label for="name">Name:</label>
   <input type="text" name="name" value="<%= @animal.name %>" />
-  <label for="adoptable">Available for Adoption:</label>
-  <input type="text" name="adoptable" value="<%= @animal.adoptable %>" />
+  <p><label for="admission_date">Admission Date:</label>
+  <input type="text" name="admission_date" value="<%= @animal.admission_date %>" /><p>
+  <p><label for="animal_type">Animal Type</label>
+  <input type="text" name="animal_type" value="<%= @animal.animal_type %>" /><p>
+  <p><label for="adoptable">Adoptable?:</label>
+  <input type="text" name="adoptable" value="<%= @animal.adoptable %>" /><p>
+  <p><label for="owner">Owner:</label>
+  <input type="text" name="owner" value="<%= @animal.owner %>" /><p>
+  <p><label for="adoption_status">Adoption Status:</label>
+  <input type="text" name="adoption_status" value="<%= @animal.adoption_status %>" /><p>
     <p><input type="submit" value="Submit"></p>
 </form>
