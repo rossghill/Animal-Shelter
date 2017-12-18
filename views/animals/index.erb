@@ -5,6 +5,6 @@
 <p><%= animal.name %></p>
 <p>Admission Date: <%= animal.admission_date %></p>
 <p>Available for adoption? <%= animal.adoptable %></p>
-<a href="/animals/show">Edit</a>
+<a href="/animals/<%= animal.id %>">Edit</a>
 <hr/>
 <% end %>

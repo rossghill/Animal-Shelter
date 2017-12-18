@@ -5,7 +5,7 @@ class Animal
   attr_reader(:id, :name, :admission_date, :adoptable, :owner, :animal_type, :adoption_status)
 
   def initialize(options)
-    @id = options['id'].to_i
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @admission_date = options['admission_date']
     @adoptable = options['adoptable']
@@ -16,11 +16,11 @@ class Animal
 
   def save
     sql = "INSERT INTO animals
-          (name, admission_date, adoptable, animal_type, adoption_status)
+          (name, admission_date, adoptable, animal_type, adoption_status, owner)
           VALUES
-          ($1, $2, $3, $4, $5)
+          ($1, $2, $3, $4, $5, $6)
           RETURNING id"
-    values = [@name, @admission_date, @adoptable, @animal_type, @adoption_status]
+    values = [@name, @admission_date, @adoptable, @animal_type, @adoption_status, @owner]
     result = SqlRunner.run(sql, values)
     @id = result[0]['id'].to_i
   end
