@@ -3,10 +3,14 @@
 <% @owners.each do |owner| %>
 <p><span class="bold-text"><%= owner.name %></span></p>
 <p>Pet(s):
-
-<% if owner.animals[0] != nil %>
-  <%= owner.animals.each['name'] %>
+<% if owner.animals.length != 0 %>
+  <% owner.animals.each do |animals| %>
+    <%= animals.name %>
+  <% end %>
+<% else %>
+  Not adopted
 <% end %>
+
 
 </p>
 
