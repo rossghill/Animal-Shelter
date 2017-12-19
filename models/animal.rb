@@ -28,11 +28,11 @@ class Animal
     sql = "SELECT owners.*
     FROM owners
     INNER JOIN adoptions
-    ON adoptions.animal_id = animal_id
-    WHERE adoptions.owner_id = $1"
+    ON adoptions.owner_id = owners.id
+    WHERE adoptions.animal_id =  $1"
     values = [@id]
     result = SqlRunner.run(sql, values)
-    return result.map { |owner| Owner.new(result)}
+    return result.map { |owner| Owner.new(owner)}
   end
 
   def self.all

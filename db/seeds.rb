@@ -81,6 +81,6 @@ adoption3.save()
 
 all_animals = Animal.all()
 all_adoptions = Adoption.all()
-
+animal4.owner
 binding.pry()
 nil

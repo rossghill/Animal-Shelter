@@ -4,9 +4,8 @@
 <p><span class="bold-text"><%= owner.name %></span></p>
 <p>Pet(s):
 
-
 <% if owner.animals[0] != nil %>
-  <%= owner.animals[0].name %>
+  <%= owner.animals.each['name'] %>
 <% end %>
 
 </p>

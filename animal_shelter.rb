@@ -6,5 +6,5 @@ require_relative('controllers/animal_type_controller')
 require_relative('controllers/owner_controller')
 
 get '/' do
-  erb( :index )
+  erb(:index)
 end
