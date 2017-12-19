@@ -31,7 +31,7 @@ class Animal
     ON adoptions.animal_id = animal_id
     WHERE adoptions.owner_id = $1"
     values = [@id]
-    result = SqlRunner.run(sql, values).first
+    result = SqlRunner.run(sql, values)
     return result.map { |owner| Owner.new(result)}
   end
 
