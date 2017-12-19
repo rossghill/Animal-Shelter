@@ -92,6 +92,26 @@ nav ul li a:hover {
   font-size: 16px;
 }
 
+#adopt-button {
+  z-index: 1;
+  height: 20%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+}
+
+.adoption-img-container {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adoption-img {
+
+}
+
 .bold-text {
   font-weight: bold;
 }
