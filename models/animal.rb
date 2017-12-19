@@ -24,6 +24,17 @@ class Animal
     @id = result[0]['id'].to_i
   end
 
+  def owner
+    sql = "SELECT owners.*
+    FROM owners
+    INNER JOIN adoptions
+    ON adoptions.animal_id = animal_id
+    WHERE adoptions.owner_id = $1"
+    values = [@id]
+    result = SqlRunner.run(sql, values).first
+    return result.map { |owner| Owner.new(result)}
+  end
+
   def self.all
     sql = "SELECT * FROM animals"
     values = []
@@ -45,7 +56,7 @@ class Animal
     sql = "UPDATE animals SET
           (name, admission_date, adoptable, animal_type, adoption_status) =
           ($1, $2, $3, $4, $5)
-          WHERE id = ($7)"
+          WHERE id = ($6)"
     values = [@name, @admission_date, @adoptable, @animal_type, @adoption_status, @id]
     SqlRunner.run(sql, values)
   end

@@ -22,6 +22,14 @@ class Adoption
     @id = result[0]['id'].to_i
   end
 
+  def self.all
+    sql = "SELECT * FROM adoptions"
+    values = []
+    returned_hash = SqlRunner.run(sql, values)
+    result_array = returned_hash.map { |adoption| Adoption.new(adoption) }
+    return result_array
+  end
+
   def self.delete_all
     sql = "DELETE FROM adoptions"
     values = []

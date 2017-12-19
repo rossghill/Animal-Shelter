@@ -5,10 +5,14 @@
   <input type="text" name="admission_date" value="<%= @animal.admission_date %>" /></span><p>
   <p><span class="bold-text"><label for="animal_type">Animal Type</label>
   <input type="text" name="animal_type" value="<%= @animal.animal_type %>" /></span><p>
+  <p><span class="bold-text"><label for="owner">Owner</label>
+  <select name="owner">
+  <% @animal.each do |animal| %>
+  <option value="<%= animal.owner %>"><%= animal.owner %></option>
+  <% end %>
+  </select>
   <p><span class="bold-text"><label for="adoptable">Adoptable?:</label>
   <input type="text" name="adoptable" value="<%= @animal.adoptable %>" /></span><p>
-  <p><span class="bold-text"><label for="owner">Owner:</label>
-  <input type="text" name="owner" value="<%= @animal.owner %>" /></span><p>
   <p><span class="bold-text"><label for="adoption_status">Adoption Status:</label>
   <input type="text" name="adoption_status" value="<%= @animal.adoption_status %>" /></span><p>
     <p><input type="submit" value="Submit"></p>
