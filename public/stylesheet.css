@@ -1,6 +1,6 @@
 body {
-  background-color: #EF9A9A;
-  font-family: 'Courier'
+  background-color: #ee5b48;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 h1 {
@@ -12,9 +12,20 @@ h2 {
 }
 
 nav {
-  background-color: #926B7A;
+  background-color: #de3f52;
   padding-top:2px;
-  padding-bottom: 2px
+  padding-bottom: 2px;
+}
+
+footer {
+  background-color: #ff9657;
+  height: 54px;
+  text-align: center;
+}
+
+footer p {
+  margin-top: 0;
+  padding-top: 10px;
 }
 
 nav ul {
@@ -29,13 +40,50 @@ nav li {
 }
 
 nav ul li a {
-  text-decoration: none
+  text-decoration: none;
 	}
 
 nav ul li a:hover {
 	color: #000;
 	background-color: #765561;
 	}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFF;
+}
+
+.pets-half {
+  width: 50%;
+  height: 380px;
+  background-color: red;
+  background: url('img/dog.jpg');
+  background-size: 100%;
+}
+
+.owner-half {
+  width: 50%;
+  height: 380px;
+  background-color: blue;
+  background: url('img/owner.jpg');
+  background-size: 100%;
+}
+
+#pets-button {
+  height: 15%;
+  width: 25%;
+  background: rgba(255, 255, 255, 0.5);
+  float: right;
+  font-family: 'Courier';
+}
+
+#owner-button {
+  height: 15%;
+  width: 25%;
+  background: rgba(255, 255, 255, 0.5);
+  font-family: 'Courier';
+}
 
 .bold-text {
   font-weight: bold;

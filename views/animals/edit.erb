@@ -8,7 +8,7 @@
   <p><span class="bold-text"><label for="owner">Owner</label>
   <select name="owner">
   <% @animal.each do |animal| %>
-  <option value="<%= animal.owner %>"><%= animal.owner %></option>
+  <option value="<%= animal.name %>"><%= animal.owner %></option>
   <% end %>
   </select>
   <p><span class="bold-text"><label for="adoptable">Adoptable?:</label>

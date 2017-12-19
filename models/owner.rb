@@ -24,11 +24,11 @@ class Owner
     sql = "SELECT animals.*
     FROM animals
     INNER JOIN adoptions
-    ON adoptions.owner_id = owner_id
+    ON adoptions.animal_id = animals.id
     WHERE adoptions.owner_id = $1"
     values = [@id]
-    result = SqlRunner.run(sql, values).first
-    return result.map { |animal| Animal.new(result)}
+    result = SqlRunner.run(sql, values)
+    return result.map { |animal| Animal.new(animal)}
   end
 
   # def adoptions

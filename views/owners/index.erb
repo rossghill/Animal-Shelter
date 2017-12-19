@@ -2,7 +2,15 @@
 
 <% @owners.each do |owner| %>
 <p><span class="bold-text"><%= owner.name %></span></p>
-<p>Pet</p>
+<p>Pet(s):
+
+
+<% if owner.animals[0] != nil %>
+  <%= owner.animals[0].name %>
+<% end %>
+
+</p>
+
 <a href="/owners/<%= owner.id %>">Edit</a>
 
 <hr/>
