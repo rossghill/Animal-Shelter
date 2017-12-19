@@ -1,10 +1,11 @@
 body {
-  background-color: #ff9657;
+  background-color: #91b5d9;
   font-family: 'Nunito Sans', sans-serif;
 }
 
 h1 {
   text-align: center;
+  background-color: #91d9d7;
 }
 
 h2 {
@@ -12,13 +13,13 @@ h2 {
 }
 
 nav {
-  background-color: #de3f52;
+  background-color: #97cf8c
   padding-top:2px;
   padding-bottom: 2px;
 }
 
 footer {
-  background-color: #ee5b48;
+  background-color: #96eea7;
   height: 54px;
   text-align: center;
 }
@@ -45,13 +46,17 @@ nav ul li a {
 
 nav ul li a:hover {
 	color: #000;
-	background-color: #765561;
+	background-color: #f0e7bc;
 	}
 
 .container {
   display: flex;
   flex-direction: row;
   background-color: #FFF;
+}
+
+.container a:hover {
+  background-color: #f0e7bc
 }
 
 .pets-half {
