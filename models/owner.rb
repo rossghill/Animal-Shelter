@@ -24,7 +24,7 @@ class Owner
     sql = "SELECT animals.*
     FROM animals
     INNER JOIN adoptions
-    ON owner_id = adoptions.owner_id
+    ON adoptions.owner_id = owner_id
     WHERE adoptions.owner_id = $1"
     values = [@id]
     result = SqlRunner.run(sql, values).first

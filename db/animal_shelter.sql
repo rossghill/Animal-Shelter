@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS owners;
 
 CREATE TABLE owners (
   id SERIAL8 PRIMARY KEY,
-  name VARCHAR(255),
+  name VARCHAR(255)
 );
 
 CREATE TABLE animals (
@@ -15,7 +15,6 @@ CREATE TABLE animals (
   name VARCHAR(255),
   admission_date DATE,
   adoptable VARCHAR(255),
-  owner INT2 REFERENCES owners(id),  --DELETEEEE
   animal_type VARCHAR(255), --REFERENCES animal_types(name),
   adoption_status VARCHAR(255)
 );
