@@ -17,9 +17,7 @@ end
 
 # Update
 post '/adoptions' do
-  @adoptions = Adoption.new(params)
-  @adoptions.save()
+  adoption = Adoption.new(params)
+  adoption.save()
+  redirect to ("/animals/index")
 end
-
-params[owner_id]
-params[animal_id]

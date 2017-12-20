@@ -1,11 +1,14 @@
 body {
-  background-color: #91b5d9;
+  background-color: #7490AD;
   font-family: 'Nunito Sans', sans-serif;
 }
 
 h1 {
   text-align: center;
   background-color: #91d9d7;
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+  color: #7490AD;
 }
 
 h2 {
@@ -57,7 +60,7 @@ nav ul li a:hover {
 }
 
 .container a:hover {
-  background-color: #f0e7bc
+  background-color: #f0e7bc;
 }
 
 .pets-half {
@@ -74,6 +77,12 @@ nav ul li a:hover {
   background-color: blue;
   background: url('img/owner.jpg');
   background-size: 100%;
+}
+
+.animal-images {
+  width: 300px;
+  height: 300px;
+  float: right;
 }
 
 #pets-button {
