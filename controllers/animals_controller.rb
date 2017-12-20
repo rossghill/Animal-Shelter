@@ -22,12 +22,13 @@ end
 
 # New animal
 get '/animals/new' do
-  @animals = Animal.all
-  erb(:new)
+  @animals = Animal.all()
+  erb(:"animals/new")
 end
 
 post '/animals/index' do
-  Animal.new(params).save
+  @animal = Animal.new(params)
+  animal.save()
   redirect to ("/animals/index")
 end
 
