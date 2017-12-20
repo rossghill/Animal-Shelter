@@ -23,6 +23,7 @@ end
 #Edit
 get '/animals/:id/edit' do
   @animal = Animal.find(params['id'].to_i)
+  @owner = Owner.all
   erb(:"animals/edit")
 end
 

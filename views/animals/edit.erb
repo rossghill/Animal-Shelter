@@ -2,14 +2,14 @@
   <p><span class="bold-text"><label for="name">Name:</label>
   <input type="text" name="name" value="<%= @animal.name %>" /></p>
   <p><span class="bold-text"><label for="admission_date">Admission Date:</label>
-  <input type="text" name="admission_date" value="<%= @animal.admission_date %>" /></span><p>
+  <input type="date" name="admission_date" value="<%= @animal.admission_date %>" /></span><p>
   <p><span class="bold-text"><label for="animal_type">Animal Type</label>
   <input type="text" name="animal_type" value="<%= @animal.animal_type %>" /></span><p>
   <p><span class="bold-text"><label for="owner">Owner</label>
-    <select name="owner" id="" value="<%= @name %>">
-    <option value="value1">Zsolt</option>
-    <option value="value2">Alex</option>
-    <option value="value3">John</option>
+    <select name="owner.id" id="" value="<%= @name %>">
+    <option value="@owner.name">Zsolt</option>
+    <option value="@owner.name">Alex</option>
+    <option value="@owner.name">John</option>
   </select>
   <p><span class="bold-text"><label for="adoptable">Adoptable?:</label>
   <input type="text" name="adoptable" value="<%= @animal.adoptable %>" /></span><p>

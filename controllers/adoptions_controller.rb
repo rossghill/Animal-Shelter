@@ -12,17 +12,14 @@ end
 get '/adoptions/adopt' do
   @animals = Animal.all
   @owners = Owner.all
-  @animal = Animal.find(params['id'].to_i)
-  @owner = Owner.find(params['id'].to_i)
-  @adoptions = Adoptions.all()
   erb(:"adoptions/adopt")
 end
 
 # Update
 post '/adoptions' do
-  @all_animals = Animals.all()
-  @all_owners = Owners.all()
-
-  @adoptions =
-  erb(:adopt)
+  @adoptions = Adoption.new(params)
+  @adoptions.save()
 end
+
+params[owner_id]
+params[animal_id]

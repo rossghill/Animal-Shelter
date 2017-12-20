@@ -1,17 +1,17 @@
 <h2>New Adoption</h2>
 
-<form class="" action="index.html" method="POST">
+<form class="" action="/adoptions" method="POST">
   <label for="owner_select">Select Owner: </label>
-  <select name="owner_id" selected="<%= adoptions.owner_id %>">
-    <% @all_owners.each do |owner| %>
-      <option value="<%= adoptions.owner_id">owner.name</option>
-    <% end %>  
+  <select name="owner_id" selected="">
+    <% @owners.each do |owner| %>
+      <option value="<%= owner.id%>"><%=owner.name%></option>
+    <% end %>
   </select>
   <label for="animal_select">Select Animal: </label>
-  <select name="animal_id" selected="<%= adoptions.animal_id %>">
-    <% @all_animals.each do |animal| %>
-    <option value="<%= adoptions.animal_id">animal.name</option>
+  <select name="animal_id" selected="">
+    <% @animals.each do |animal| %>
+    <option value="<%= animal.id%>"><%=animal.name%></option>
     <% end %>
-  <input type="submit" value="Create adoption">
   </select>
+  <input type="submit" value="Create adoption">
 </form>
