@@ -1,19 +1,26 @@
 <h2>Current Pets</h2>
 
-<% @animals.each do |animal| %>
-<p><span class="bold-text"><%= animal.name %></span></p>
-<p>Admission Date: <%= animal.admission_date %></p>
-<p>Owner:
-<% if animal.owner.length != 0 %>
-  <% animal.owner.each do |owner| %>
-    <%= owner.name %>
+<div class="pets-container">
+
+
+  <% @animals.each do |animal| %>
+  <hr/>
+    <p><span class="bold-text"><%= animal.name %></span></p>
+    <p>Admission Date: <%= animal.admission_date %></p>
+    <p>Owner:
+      <% if animal.owner.length != 0 %>
+        <% animal.owner.each do |owner| %>
+        <%= owner.name %>
+      <% end %>
+      <% else %>
+        Not adopted
+      <% end %>
+    </p>
+    <p>Available for adoption? <%= animal.adoptable %></p>
+    <a href="/animals/<%= animal.id %>">More/Edit</a>
+    <p></p>
+    <img class = "animal-images" src="/img/chico.png" alt="nice dog">
+
   <% end %>
-<% else %>
-  Not adopted
-<% end %>
-</p>
-<p>Available for adoption? <%= animal.adoptable %></p>
-<a href="/animals/<%= animal.id %>">More/Edit</a>
-<img class = "animal-images" src="/img/chico.png" alt="nice dog">
-<hr/>
-<% end %>
+
+</div>

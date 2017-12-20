@@ -80,9 +80,10 @@ nav ul li a:hover {
 }
 
 .animal-images {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   float: right;
+  align-self: flex-end;
 }
 
 #pets-button {
@@ -118,8 +119,9 @@ nav ul li a:hover {
   margin-right: auto;
 }
 
-.adoption-img {
-
+.pets-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .bold-text {
