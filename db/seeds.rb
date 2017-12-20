@@ -26,27 +26,32 @@ animal1 = Animal.new({'name' => 'Chico',
                       'admission_date' => '2017-07-01',
                       'adoptable' => 'Yes',
                       'animal_type' => 'Dog',
-                      'adoption_status' => 'unadopted'})
+                      'adoption_status' => 'unadopted',
+                      'image' => '/img/chico.png'})
 animal2 = Animal.new({'name' => 'Gizmo',
                       'admission_date' => '2017-11-17',
                       'adoptable' => 'No',
                       'animal_type' => 'Guinea Pig',
-                      'adoption_status' => 'unadopted'})
+                      'adoption_status' => 'unadopted',
+                      'image' => '/img/guinea.jpeg'})
 animal3 = Animal.new({'name' => 'Liz',
                       'admission_date' => '2017-11-08',
                       'adoptable' => 'No',
                       'animal_type' => 'Cat',
-                      'adoption_status' => 'adopted'})
+                      'adoption_status' => 'adopted',
+                      'image' => '/img/cat.jpg'})
 animal4 = Animal.new({'name' => 'Elmo',
                       'admission_date' => '2017-12-09',
                       'adoptable' => 'No',
                       'animal_type' => 'Python',
-                      'adoption_status' => 'adopted'})
+                      'adoption_status' => 'adopted',
+                      'image' => '/img/python.jpg'})
 animal5 = Animal.new({'name' => 'Jocky',
                       'admission_date' => '2017-12-09',
                       'adoptable' => 'No',
                       'animal_type' => 'Budgie',
-                      'adoption_status' => 'adopted'})
+                      'adoption_status' => 'adopted',
+                      'image' => '/img/budgie.jpg'})
 
 animal1.save()
 animal2.save()

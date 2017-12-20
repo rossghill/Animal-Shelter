@@ -16,7 +16,8 @@ CREATE TABLE animals (
   admission_date DATE,
   adoptable VARCHAR(255),
   animal_type VARCHAR(255), --REFERENCES animal_types(name),
-  adoption_status VARCHAR(255)
+  adoption_status VARCHAR(255),
+  image TEXT
 );
 
 CREATE TABLE animal_types (

@@ -16,11 +16,9 @@
       <% end %>
     </p>
     <p>Available for adoption? <%= animal.adoptable %></p>
+    <img class="animal-images" src="<%= animal.image %>">
     <a href="/animals/<%= animal.id %>">More/Edit</a>
     <p></p>
-
-    <img class = "animal-images" src="/img/chico.png" alt="nice dog">
-
   <% end %>
 
 </div>
