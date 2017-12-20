@@ -1,20 +1,24 @@
 <h2>New Adoption</h2>
 
-<form class="" action="/adoptions" method="POST">
-  <label for="owner_select">Select Owner: </label>
-  <select name="owner_id" selected="">
-    <% @owners.each do |owner| %>
-      <option value="<%= owner.id%>"><%=owner.name%></option>
-    <% end %>
-  </select>
-  <label for="animal_select">Select Animal: </label>
-  <select name="animal_id" selected="">
-      <% @animals.each do |animal| %>
-        <% if animal.adoptable != "No" && animal.adoption_status != "Unadoptable" %>
-          <option value="<%= animal.id%>"><%=animal.name%></option>
-          <% animal.adoptable = "No" %>
-        <% end %>
+<div class="adoption-form">
+
+  <form action="/adoptions" method="POST">
+    <label for="owner_select">Select Owner: </label>
+    <select name="owner_id" selected="">
+      <% @owners.each do |owner| %>
+        <option value="<%= owner.id%>"><%=owner.name%></option>
       <% end %>
-  </select>
-  <input type="submit" value="Create adoption">
-</form>
+    </select>
+    <label for="animal_select">Select Animal: </label>
+    <select name="animal_id" selected="">
+        <% @animals.each do |animal| %>
+          <% if animal.adoptable != "No" && animal.adoption_status != "Unadoptable" %>
+            <option value="<%= animal.id%>"><%=animal.name%></option>
+            <% animal.adoptable = "No" %>
+          <% end %>
+        <% end %>
+    </select>
+    <input type="submit" value="Create adoption">
+  </form>
+
+</div>

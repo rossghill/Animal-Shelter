@@ -137,6 +137,10 @@ nav ul li a:hover {
   width: 482px;
 }
 
+.adoption-form {
+  text-align: center;
+}
+
 .fancy-text {
   font-family: 'Pacifico', cursive;
   font-size: 26px;
