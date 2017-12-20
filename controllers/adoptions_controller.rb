@@ -8,8 +8,21 @@ get '/adoptions/index' do
   erb(:"adoptions/index")
 end
 
-get '/adoptions/new' do
+# Select owner and animal
+get '/adoptions/adopt' do
   @animals = Animal.all
   @owners = Owner.all
-  erb(:"adoptions/new")
+  @animal = Animal.find(params['id'].to_i)
+  @owner = Owner.find(params['id'].to_i)
+  @adoptions = Adoptions.all()
+  erb(:"adoptions/adopt")
+end
+
+# Update
+post '/adoptions' do
+  @all_animals = Animals.all()
+  @all_owners = Owners.all()
+
+  @adoptions =
+  erb(:adopt)
 end
