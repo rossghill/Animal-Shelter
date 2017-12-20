@@ -2,7 +2,6 @@
 
 <div class="pets-container">
 
-
   <% @animals.each do |animal| %>
   <hr/>
     <p><span class="bold-text"><%= animal.name %></span></p>
@@ -19,6 +18,7 @@
     <p>Available for adoption? <%= animal.adoptable %></p>
     <a href="/animals/<%= animal.id %>">More/Edit</a>
     <p></p>
+
     <img class = "animal-images" src="/img/chico.png" alt="nice dog">
 
   <% end %>

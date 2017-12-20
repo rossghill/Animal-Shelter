@@ -1,7 +1,9 @@
 <h2>Current Owners</h2>
 
 <% @owners.each do |owner| %>
+  <% if owner.name != nil %>
 <p><span class="bold-text"><%= owner.name %></span></p>
+  <% end %>
 <p>Pet(s):
 <% if owner.animals.length != 0 %>
   <% owner.animals.each do |animals| %>
@@ -10,10 +12,6 @@
 <% else %>
   None
 <% end %>
-
-
 </p>
-
-
 <hr/>
 <% end %>

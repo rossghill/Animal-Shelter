@@ -12,7 +12,7 @@ Animal.delete_all()
 Owner.delete_all()
 AnimalType.delete_all()
 
-owner0 = Owner.new({'name' => 'none'})
+owner0 = Owner.new({'name' => 'Colin'})
 owner1 = Owner.new({'name' => 'Zsolt'})
 owner2 = Owner.new({'name' => 'Alex'})
 owner3 = Owner.new({'name' => 'John'})

@@ -17,6 +17,9 @@
       <option>No</option>
     </select>
   <p><span class="bold-text"><label for="adoption_status">Adoption Status:</label>
-  <input type="text" name="adoption_status" value="<%= @animal.adoption_status %>" /></span><p>
+  <select name="adoption_status" value="<%= @animal.adoption_status %>" /></span><p>
+    <option>Adoptable</option>
+    <option>Unadoptable</option>
+  </select>
     <p><input type="submit" value="Submit"></p>
 </form>

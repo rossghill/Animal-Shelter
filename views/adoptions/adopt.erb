@@ -10,7 +10,7 @@
   <label for="animal_select">Select Animal: </label>
   <select name="animal_id" selected="">
       <% @animals.each do |animal| %>
-        <% if animal.adoptable != "No" && animal.adoption_status != "adopted" %>
+        <% if animal.adoptable != "No" && animal.adoption_status != "Unadoptable" %>
           <option value="<%= animal.id%>"><%=animal.name%></option>
           <% animal.adoptable = "No" %>
         <% end %>

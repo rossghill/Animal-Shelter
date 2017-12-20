@@ -127,3 +127,8 @@ nav ul li a:hover {
 .bold-text {
   font-weight: bold;
 }
+
+hr {
+  margin-left: 0;
+  margin-right: 0;
+}
