@@ -20,6 +20,17 @@ get '/animals/:id' do
   erb(:"animals/show")
 end
 
+# New animal
+get '/animals/new' do
+  @animals = Animal.all
+  erb(:new)
+end
+
+post '/animals/index' do
+  Animal.new(params).save
+  redirect to ("/animals/index")
+end
+
 #Edit
 get '/animals/:id/edit' do
   @animal = Animal.find(params['id'].to_i)

@@ -92,6 +92,10 @@ nav ul li a:hover {
 
 }
 
+.new-pet-title {
+  text-align: center;
+}
+
 
 .animal-images {
   width: 200px;
