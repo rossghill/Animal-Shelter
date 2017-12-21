@@ -11,7 +11,6 @@ end
 
 # New owner
 get '/owners/new' do
-  @owners = Owner.all()
   erb(:"owners/new")
 end
 

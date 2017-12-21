@@ -23,7 +23,7 @@ nav {
 }
 
 footer {
-  background-color: #96eea7;
+  background-color: #91d9d7;
   height: 54px;
   text-align: center;
   margin-top: 50px;
@@ -85,14 +85,16 @@ nav ul li a:hover {
 .pets-container {
   display: flex;
   flex-direction: column;
-  align-self: stretch;
+  align-items: stretch;
 }
 
-.pet {
+.pet p {
+  width: 75%;
+  align-items:flex-end;
 
 }
 
-.new-pet-title {
+.new-title {
   text-align: center;
 }
 

@@ -14,17 +14,17 @@ get '/animals/index' do
   erb(:"animals/index")
 end
 
+# New animal
+get '/animals/new' do
+  erb(:"animals/new")
+end
+
 #List individual
 get '/animals/:id' do
   @animal = Animal.find(params['id'].to_i)
   erb(:"animals/show")
 end
 
-# New animal
-get '/animals/new' do
-  @animals = Animal.all()
-  erb(:"animals/new")
-end
 
 post '/animals/index' do
   @animal = Animal.new(params)
