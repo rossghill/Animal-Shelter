@@ -27,7 +27,7 @@ end
 
 
 post '/animals/index' do
-  @animal = Animal.new(params)
+  animal = Animal.new(params)
   animal.save()
   redirect to ("/animals/index")
 end
