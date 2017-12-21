@@ -56,9 +56,9 @@ class Animal
 
   def update
     sql = "UPDATE animals SET
-          (name, admission_date, adoptable, animal_type, adoption_status) =
+          (name, admission_date, adoptable, animal_type, adoption_status, image) =
           ($1, $2, $3, $4, $5, $6)
-          WHERE id = ($6)"
+          WHERE id = ($7)"
     values = [@name, @admission_date, @adoptable, @animal_type, @adoption_status, @image, @id]
     SqlRunner.run(sql, values)
   end

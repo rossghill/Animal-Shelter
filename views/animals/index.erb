@@ -2,8 +2,6 @@
 <p class="new-title"><a href="/animals/new">Add new pet</p></a>
 <div class="pets-container">
 
-
-
     <% @animals.each do |animal| %>
     <div class="pet">
 
@@ -19,13 +17,13 @@
           Not adopted
         <% end %>
       </p>
-      <p>Available for adoption? <%= animal.adoptable %></p>
+      <p>Ready for Adoption? <%= animal.adoptable %></p>
 
 
 
       <img class="animal-images" src="<%= animal.image %>">
       <a href="/animals/<%= animal.id %>">More/Edit</a>
-    
+
     </div>
     <% end %>
 </div>

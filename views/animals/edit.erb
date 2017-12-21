@@ -1,25 +1,27 @@
 <form method="POST" action="/animals/<%= @animal.id %>">
-  <p><span class="bold-text"><label for="name">Name:</label>
+  <p><label for="name">Name:</label>
   <input type="text" name="name" value="<%= @animal.name %>" /></p>
-  <p><span class="bold-text"><label for="admission_date">Admission Date:</label>
-  <input type="date" name="admission_date" value="<%= @animal.admission_date %>" /></span><p>
-  <p><span class="bold-text"><label for="animal_type">Animal Type</label>
-  <input type="text" name="animal_type" value="<%= @animal.animal_type %>" /></span><p>
-  <p><span class="bold-text"><label for="owner">Owner</label>
+  <p><label for="admission_date">Admission Date:</label>
+  <input type="date" name="admission_date" value="<%= @animal.admission_date %>" /><p>
+  <p><label for="animal_type">Animal Type</label>
+  <input type="text" name="animal_type" value="<%= @animal.animal_type %>" /><p>
+  <p><label for="owner">Owner</label>
     <select name="owner.id" id="" value="<%= @name %>">
     <option value="@owner.name">Zsolt</option>
     <option value="@owner.name">Alex</option>
     <option value="@owner.name">John</option>
   </select>
-  <p><span class="bold-text"><label for="adoptable">Adoptable?:</label>
-    <select name="adoptable" value="<%= @animal.adoptable %>" /></span><p>
+  <p><label for="adoptable">Ready for Adoption?</label>
+    <select name="adoptable" value="<%= @animal.adoptable %>" /><p>
       <option>Yes</option>
       <option>No</option>
     </select>
-  <p><span class="bold-text"><label for="adoption_status">Adoption Status:</label>
-  <select name="adoption_status" value="<%= @animal.adoption_status %>" /></span><p>
+  <p><label for="adoption_status">Adoption Status:</label>
+  <select name="adoption_status" value="<%= @animal.adoption_status %>" /><p>
     <option>Adoptable</option>
     <option>Unadoptable</option>
   </select>
+  <p><label for="image">Image</p>
+  <input type="text" name="image" value="<%= @animal.image %>" /><p>
     <p><input type="submit" value="Submit"></p>
 </form>
