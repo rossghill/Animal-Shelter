@@ -83,19 +83,21 @@ nav ul li a:hover {
 
 /* Pets page */
 .pets-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-content: flex-end;
+  /* align-content: flex-end; */
 }
 
-.pet p {
+.text-half {
+}
 
+.pet-half {
 }
 
 .new-title {
   text-align: center;
 }
-
 
 .animal-images {
   width: 200px;

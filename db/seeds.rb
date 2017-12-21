@@ -74,16 +74,6 @@ adoption1.save()
 adoption2.save()
 adoption3.save()
 
-# animal_type1 = AnimalType.new({'name' => 'Dog'})
-# animal_type2 = AnimalType.new({'name' => 'Guinea Pig'})
-# animal_type3 = AnimalType.new({'name' => 'Cat'})
-# animal_type4 = AnimalType.new({'name' => 'Python'})
-#
-# animal_type1.save()
-# animal_type2.save()
-# animal_type3.save()
-# animal_type4.save()
-
 all_animals = Animal.all()
 all_adoptions = Adoption.all()
 animal4.owner

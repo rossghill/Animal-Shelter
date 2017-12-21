@@ -5,12 +5,6 @@
   <input type="date" name="admission_date" value="<%= @animal.admission_date %>" /><p>
   <p><label for="animal_type">Animal Type</label>
   <input type="text" name="animal_type" value="<%= @animal.animal_type %>" /><p>
-  <p><label for="owner">Owner</label>
-    <select name="owner.id" id="" value="<%= @name %>">
-    <option value="@owner.name">Zsolt</option>
-    <option value="@owner.name">Alex</option>
-    <option value="@owner.name">John</option>
-  </select>
   <p><label for="adoptable">Ready for Adoption?</label>
     <select name="adoptable" value="<%= @animal.adoptable %>" /><p>
       <option>Yes</option>

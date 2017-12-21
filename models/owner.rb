@@ -31,17 +31,6 @@ class Owner
     return result.map { |animal| Animal.new(animal)}
   end
 
-  # def adoptions
-  #   sql = "SELECT adoptions.*
-  #   FROM adoptions
-  #   INNER JOIN animals
-  #   ON animal_id = adoptions.owner_id
-  #   WHERE adoptions.animal_id = $1"
-  #   values = [@id]
-  #   result = SqlRunner.run(sql, values)
-  #   return result.map { |adoption| Adoption.new(result)}
-  # end
-
   def self.all
     sql = "SELECT * FROM owners"
     values = []
@@ -71,6 +60,5 @@ class Owner
     owner = Owner.new(result)
     return owner
   end
-
 
 end
