@@ -21,7 +21,15 @@
     <option>Adoptable</option>
     <option>Unadoptable</option>
   </select>
-  <p><label for="image">Image</p>
-  <input type="text" name="image" value="<%= @animal.image %>" /><p>
-    <p><input type="submit" value="Submit"></p>
+  <p><label for="image">Image
+    <select name="image">
+      <option value="/img/budgie.jpg">/img/budgie.jpg</option>
+      <option value="/img/budgie2.jpg">/img/budgie2.jpg</option>
+      <option value="/img/cat.jpg">/img/cat.jpg</option>
+      <option value="/img/chico.png">/img/chico.png</option>
+      <option value="/img/guinea.jpeg">/img/guinea.jpeg</option>
+      <option value="/img/python.jpg">/img/python.jpg</option>
+      <option value="/img/rabbit.jpg">/img/rabbit.jpg</option>
+    </select></p>
+  <p><input type="submit" value="Submit"></p>
 </form>
